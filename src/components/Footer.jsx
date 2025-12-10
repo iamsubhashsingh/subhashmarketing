@@ -31,7 +31,7 @@ const Footer = () => {
   ]
 
   return (
-    <footer className="relative bg-gray-50 dark:bg-gradient-to-b dark:from-gray-900/50 dark:to-gray-900 border-t border-gray-200 dark:border-gray-800">
+    <footer className="relative backdrop-blur-lg bg-white/90 dark:bg-gray-900/90 border-t border-gray-200 dark:border-gray-800">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="py-12 lg:py-16">
           <div className="grid lg:grid-cols-4 gap-8">
@@ -43,12 +43,14 @@ const Footer = () => {
                 viewport={{ once: true }}
                 className="mb-6"
               >
-                <div className="text-2xl font-heading font-bold bg-gradient-to-r from-primary-600 to-secondary-600 bg-clip-text text-transparent mb-2">
-                  GrowthWave
-                </div>
-                <div className="text-sm font-medium text-gray-800 dark:text-gray-300">
-                  Performance-driven marketing agency
-                </div>
+                <Link to="/" className="flex items-center space-x-2">
+                  <div className="text-2xl font-heading font-bold bg-gradient-to-r from-primary-600 to-secondary-600 bg-clip-text text-transparent">
+                    GrowthWave
+                  </div>
+                  <span className="text-sm font-semibold text-gray-700 dark:text-gray-300">
+                    Marketing
+                  </span>
+                </Link>
               </motion.div>
               
               <motion.p
@@ -56,7 +58,7 @@ const Footer = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.1 }}
                 viewport={{ once: true }}
-                className="text-gray-700 dark:text-gray-400 text-sm mb-6"
+                className="text-gray-700 dark:text-gray-300 text-sm mb-6"
               >
                 We help ambitious brands scale their growth through data-driven marketing strategies and high-ROI campaigns.
               </motion.p>
@@ -73,7 +75,7 @@ const Footer = () => {
                     key={index}
                     href={social.href}
                     whileHover={{ scale: 1.1, y: -2 }}
-                    className="w-10 h-10 rounded-full bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-700 flex items-center justify-center text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 hover:text-primary-600 dark:hover:text-primary-400 transition-colors shadow-sm"
+                    className="w-10 h-10 rounded-full bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors flex items-center justify-center"
                   >
                     <social.icon className="w-5 h-5" />
                   </motion.a>
@@ -95,7 +97,7 @@ const Footer = () => {
                   >
                     <Link
                       to={link.path}
-                      className="text-gray-700 dark:text-gray-400 hover:text-primary-600 dark:hover:text-primary-400 transition-colors font-medium"
+                      className="text-sm font-medium text-gray-700 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400 transition-colors"
                     >
                       {link.name}
                     </Link>
@@ -118,7 +120,7 @@ const Footer = () => {
                   >
                     <a
                       href="#"
-                      className="text-gray-700 dark:text-gray-400 hover:text-primary-600 dark:hover:text-primary-400 transition-colors font-medium"
+                      className="text-sm font-medium text-gray-700 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400 transition-colors"
                     >
                       {service}
                     </a>
@@ -135,34 +137,27 @@ const Footer = () => {
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
-                  className="flex flex-col"
+                  className="text-gray-700 dark:text-gray-300"
                 >
-                  <span className="text-sm font-medium text-gray-800 dark:text-gray-300 mb-1">Email</span>
-                  <a href="mailto:hello@growthwave.com" className="text-primary-600 dark:text-primary-400 hover:underline">
-                    hello@growthwave.com
-                  </a>
+                  hello@growthwave.com
                 </motion.li>
                 <motion.li
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ delay: 0.1 }}
                   viewport={{ once: true }}
-                  className="flex flex-col"
+                  className="text-gray-700 dark:text-gray-300"
                 >
-                  <span className="text-sm font-medium text-gray-800 dark:text-gray-300 mb-1">Phone</span>
-                  <a href="tel:+15551234567" className="text-primary-600 dark:text-primary-400 hover:underline">
-                    +1 (555) 123-4567
-                  </a>
+                  +1 (555) 123-4567
                 </motion.li>
                 <motion.li
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ delay: 0.2 }}
                   viewport={{ once: true }}
-                  className="flex flex-col"
+                  className="text-gray-700 dark:text-gray-300"
                 >
-                  <span className="text-sm font-medium text-gray-800 dark:text-gray-300 mb-1">Location</span>
-                  <span className="text-gray-700 dark:text-gray-400">San Francisco, CA</span>
+                  San Francisco, CA
                 </motion.li>
               </ul>
             </div>
@@ -170,7 +165,7 @@ const Footer = () => {
         </div>
 
         {/* Bottom bar */}
-        <div className="border-t border-gray-300 dark:border-gray-800 py-8">
+        <div className="border-t border-gray-200 dark:border-gray-800 py-8">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <motion.p
               initial={{ opacity: 0 }}
@@ -182,10 +177,10 @@ const Footer = () => {
             </motion.p>
             
             <div className="flex items-center space-x-6">
-              <a href="#" className="text-gray-700 dark:text-gray-400 hover:text-primary-600 dark:hover:text-primary-400 text-sm transition-colors font-medium">
+              <a href="#" className="text-sm font-medium text-gray-700 dark:text-gray-400 hover:text-primary-600 dark:hover:text-primary-400 transition-colors">
                 Privacy Policy
               </a>
-              <a href="#" className="text-gray-700 dark:text-gray-400 hover:text-primary-600 dark:hover:text-primary-400 text-sm transition-colors font-medium">
+              <a href="#" className="text-sm font-medium text-gray-700 dark:text-gray-400 hover:text-primary-600 dark:hover:text-primary-400 transition-colors">
                 Terms of Service
               </a>
               
@@ -193,7 +188,7 @@ const Footer = () => {
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.9 }}
                 onClick={scrollToTop}
-                className="w-10 h-10 rounded-full bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-700 flex items-center justify-center text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 hover:text-primary-600 dark:hover:text-primary-400 transition-colors shadow-sm"
+                className="w-10 h-10 rounded-full bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors flex items-center justify-center"
                 aria-label="Scroll to top"
               >
                 <ArrowUp className="w-5 h-5" />
