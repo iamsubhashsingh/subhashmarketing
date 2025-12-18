@@ -139,7 +139,7 @@ const Footer = () => {
                   viewport={{ once: true }}
                   className="text-gray-700 dark:text-gray-300"
                 >
-                  hello@growthwave.com
+                  Growthwavemarketing99@gmail.com
                 </motion.li>
                 <motion.li
                   initial={{ opacity: 0, y: 20 }}
@@ -148,7 +148,7 @@ const Footer = () => {
                   viewport={{ once: true }}
                   className="text-gray-700 dark:text-gray-300"
                 >
-                  +1 (555) 123-4567
+                  +91 9079342907
                 </motion.li>
                 <motion.li
                   initial={{ opacity: 0, y: 20 }}
@@ -157,7 +157,7 @@ const Footer = () => {
                   viewport={{ once: true }}
                   className="text-gray-700 dark:text-gray-300"
                 >
-                  San Francisco, CA
+                  Bangaluru, India
                 </motion.li>
               </ul>
             </div>
@@ -173,7 +173,7 @@ const Footer = () => {
               viewport={{ once: true }}
               className="text-gray-700 dark:text-gray-400 text-sm mb-4 md:mb-0"
             >
-              © {new Date().getFullYear()} GrowthWave Marketing. All rights reserved.
+              © {new Date().getFullYear()} GrowthWave Marketing. All rights reserved. (Developed by sumeet.sastacoder.com)
             </motion.p>
             
             <div className="flex items-center space-x-6">

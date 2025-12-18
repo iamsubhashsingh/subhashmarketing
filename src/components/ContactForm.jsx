@@ -95,11 +95,11 @@ const ContactForm = () => {
               className="w-full px-4 py-3 bg-gray-50 dark:bg-white/5 border border-gray-200 dark:border-gray-700 rounded-lg text-gray-900 dark:text-white focus:outline-none focus:border-primary-500 focus:ring-1 focus:ring-primary-500"
             >
               <option value="">Select budget range</option>
-              <option value="<500">Under $500</option>
-              <option value="500-2000">$500 - $2,000</option>
-              <option value="2000-5000">$2,000 - $5,000</option>
-              <option value="5000-10000">$5,000 - $10,000</option>
-              <option value=">10000">Over $10,000</option>
+              <option value="<500">Under ₹50000</option>
+              <option value="500-2000">₹50000 - ₹100000</option>
+              <option value="2000-5000">₹100000 - ₹150000</option>
+              <option value="5000-10000">₹150000 - ₹200000</option>
+              <option value=">10000">Over ₹200000</option>
             </select>
             {errors.budget && (
               <p className="mt-1 text-sm text-red-500">{errors.budget.message}</p>

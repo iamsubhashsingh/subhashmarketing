@@ -11,7 +11,7 @@ export const services = [
       "Monthly performance reports"
     ],
     bestFor: "Businesses looking for immediate, measurable results",
-    price: "Starting at $1,500/mo"
+    price: "Starting at ₹12,000 / mo"
   },
   {
     id: 2,
@@ -25,7 +25,7 @@ export const services = [
       "Backlink strategy"
     ],
     bestFor: "Brands building long-term authority and organic traffic",
-    price: "Starting at $2,000/mo"
+    price: "Starting at ₹15,000 / mo"
   },
   {
     id: 3,
@@ -39,7 +39,7 @@ export const services = [
       "Influencer partnerships"
     ],
     bestFor: "Brands wanting to build social proof and engagement",
-    price: "Starting at $1,200/mo"
+    price: "Starting at ₹10,000 / mo"
   },
   {
     id: 4,
@@ -53,7 +53,7 @@ export const services = [
       "Conversion rate optimization"
     ],
     bestFor: "Businesses scaling with automated sales systems",
-    price: "Starting at $3,000"
+    price: "Starting at ₹20,000/One time"
   },
   {
     id: 5,
@@ -67,7 +67,7 @@ export const services = [
       "Performance analytics"
     ],
     bestFor: "Businesses with existing email lists",
-    price: "Starting at $800/mo"
+    price: "₹15,000 / mo"
   },
   {
     id: 6,
@@ -82,7 +82,22 @@ export const services = [
     ],
     bestFor: "Startups and rebranding initiatives",
     price: "Custom packages"
+  },
+  {
+    id: 7,
+    title: "Website Builder",
+    description: "Craft compelling your website for brand",
+    icon: "🎯",
+    features: [
+      "Brand positioning",
+      "Visual identity development",
+      "Messaging framework",
+      "Competitor analysis"
+    ],
+    bestFor: "Startups and Small Bussiness",
+    price: "₹25,000 (one-time)"
   }
+  
 ]
 
 export const benefits = [
@@ -218,7 +233,7 @@ export const pricingPlans = [
   {
     id: 1,
     name: "Starter",
-    price: "$1,500",
+    price: "₹1,5000",
     period: "/month",
     description: "Perfect for small businesses starting their digital journey",
     features: [
@@ -234,7 +249,7 @@ export const pricingPlans = [
   {
     id: 2,
     name: "Growth",
-    price: "$3,500",
+    price: "₹2,5000",
     period: "/month",
     description: "Ideal for scaling businesses with clear growth targets",
     features: [
