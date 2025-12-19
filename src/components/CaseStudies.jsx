@@ -1,11 +1,17 @@
-import { motion } from 'framer-motion'
-import { ArrowUpRight } from 'lucide-react'
-import { caseStudies } from '../constants/data'
+import { motion } from "framer-motion";
+import { ArrowUpRight } from "lucide-react";
+import { caseStudies } from "../constants/data";
 
 const CaseStudies = () => {
+  // ✅ SAFETY GUARD (prevents white screen)
+  if (!Array.isArray(caseStudies) || caseStudies.length === 0) {
+    return null; // or a loader if you want
+  }
+
   return (
     <section className="section-padding">
       <div className="max-w-7xl mx-auto">
+        {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -21,6 +27,7 @@ const CaseStudies = () => {
           </p>
         </motion.div>
 
+        {/* Cards */}
         <div className="grid lg:grid-cols-3 gap-8">
           {caseStudies.map((study, index) => (
             <motion.div
@@ -33,11 +40,17 @@ const CaseStudies = () => {
               className="group"
             >
               <div className="bg-white dark:bg-gray-800/50 border border-gray-200 dark:border-gray-700 rounded-2xl p-8 h-full card-hover backdrop-blur-sm">
+                {/* Client */}
                 <div className="flex items-center justify-between mb-6">
                   <div>
-                    <div className="text-sm text-gray-500 dark:text-gray-400">Client</div>
-                    <h3 className="text-2xl font-bold text-gray-900 dark:text-white">{study.client}</h3>
+                    <div className="text-sm text-gray-500 dark:text-gray-400">
+                      Client
+                    </div>
+                    <h3 className="text-2xl font-bold text-gray-900 dark:text-white">
+                      {study.client}
+                    </h3>
                   </div>
+
                   <motion.div
                     whileHover={{ rotate: 45 }}
                     className="w-12 h-12 rounded-full bg-gradient-to-r from-primary-500/20 to-secondary-500/20 flex items-center justify-center"
@@ -46,20 +59,32 @@ const CaseStudies = () => {
                   </motion.div>
                 </div>
 
+                {/* Service */}
                 <div className="mb-6">
-                  <div className="text-sm text-gray-500 dark:text-gray-400 mb-2">Service Provided</div>
-                  <div className="inline-flex items-center px-3 py-1 rounded-full bg-primary-500/10 text-primary-500 text-sm">
+                  <div className="text-sm text-gray-500 dark:text-gray-400 mb-2">
+                    Service Provided
+                  </div>
+                  <span className="inline-flex items-center px-3 py-1 rounded-full bg-primary-500/10 text-primary-500 text-sm">
                     {study.service}
+                  </span>
+                </div>
+
+                {/* Result */}
+                <div className="mb-8">
+                  <div className="text-sm text-gray-500 dark:text-gray-400 mb-2">
+                    Result
+                  </div>
+                  <div className="text-3xl font-bold gradient-text">
+                    {study.result}
                   </div>
                 </div>
 
-                <div className="mb-8">
-                  <div className="text-sm text-gray-500 dark:text-gray-400 mb-2">Result</div>
-                  <div className="text-3xl font-bold gradient-text">{study.result}</div>
-                </div>
+                {/* Description */}
+                <p className="text-gray-600 dark:text-gray-400 mb-8">
+                  {study.description}
+                </p>
 
-                <p className="text-gray-600 dark:text-gray-400 mb-8">{study.description}</p>
-
+                {/* Progress line */}
                 <motion.div
                   initial={{ width: 0 }}
                   whileInView={{ width: "100%" }}
@@ -71,6 +96,7 @@ const CaseStudies = () => {
           ))}
         </div>
 
+        {/* CTA */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -88,7 +114,7 @@ const CaseStudies = () => {
         </motion.div>
       </div>
     </section>
-  )
-}
+  );
+};
 
-export default CaseStudies
+export default CaseStudies;

@@ -54,19 +54,19 @@ const AboutHero = () => {
               <div className="flex items-start">
                 <div className="w-2 h-2 bg-accent-500 rounded-full mt-2 mr-3 flex-shrink-0" />
                 <p className="text-gray-700 dark:text-gray-300">
-                  Founded in 2018 with a vision to transform how businesses approach digital marketing
+                  Founded in 2025 with a vision to transform how businesses approach digital marketing
                 </p>
               </div>
               <div className="flex items-start">
                 <div className="w-2 h-2 bg-accent-500 rounded-full mt-2 mr-3 flex-shrink-0" />
                 <p className="text-gray-700 dark:text-gray-300">
-                  Successfully scaled 100+ brands across various industries
+                  Successfully scaled 20+ brands across various industries
                 </p>
               </div>
               <div className="flex items-start">
                 <div className="w-2 h-2 bg-accent-500 rounded-full mt-2 mr-3 flex-shrink-0" />
                 <p className="text-gray-700 dark:text-gray-300">
-                  Combined expertise of 50+ years in digital marketing and growth strategy
+                  Combined expertise of 4+ years in digital marketing and growth strategy
                 </p>
               </div>
             </motion.div>

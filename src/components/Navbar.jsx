@@ -76,14 +76,17 @@ const Navbar = () => {
             </motion.button>
             
             {/* CTA Button */}
-            <motion.button
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              className="btn-primary flex items-center space-x-2"
-            >
-              <span>Get Free Strategy Call</span>
-              <ArrowRight className="w-4 h-4" />
-            </motion.button>
+            <Link to="/contact">
+  <motion.button
+    whileHover={{ scale: 1.05 }}
+    whileTap={{ scale: 0.95 }}
+    className="btn-primary flex items-center space-x-2"
+  >
+    <span>Get Free Strategy Call</span>
+    <ArrowRight className="w-4 h-4" />
+  </motion.button>
+</Link>
+
           </div>
 
           {/* Mobile menu button */}

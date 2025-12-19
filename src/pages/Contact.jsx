@@ -7,19 +7,19 @@ const Contact = () => {
     {
       icon: Mail,
       title: "Email",
-      details: "hello@growthwave.com",
+      details: "Growthwavemarketing99@gmail.com",
       description: "We'll respond within 24 hours"
     },
     {
       icon: Phone,
       title: "Phone",
-      details: "+1 (555) 123-4567",
+      details: "+91 9079342907",
       description: "Mon-Fri, 9am-6pm EST"
     },
     {
       icon: MapPin,
       title: "Office",
-      details: "San Francisco, CA",
+      details: "Bangaluru, IN",
       description: "Remote team worldwide"
     },
     {

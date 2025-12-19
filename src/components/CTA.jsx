@@ -1,5 +1,6 @@
-import { motion } from 'framer-motion'
-import { ArrowRight } from 'lucide-react'
+import { motion } from "framer-motion";
+import { ArrowRight } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const CTA = () => {
   return (
@@ -14,28 +15,16 @@ const CTA = () => {
         >
           {/* Background gradient */}
           <div className="absolute inset-0 bg-gradient-to-r from-primary-100 via-secondary-100 to-accent-100 dark:from-primary-900/30 dark:via-secondary-900/30 dark:to-accent-900/30" />
-          
+
           {/* Animated particles */}
           <motion.div
-            animate={{
-              rotate: 360
-            }}
-            transition={{
-              duration: 20,
-              repeat: Infinity,
-              ease: "linear"
-            }}
+            animate={{ rotate: 360 }}
+            transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
             className="absolute -top-32 -right-32 w-64 h-64 bg-gradient-to-r from-primary-500/10 to-secondary-500/10 rounded-full"
           />
           <motion.div
-            animate={{
-              rotate: -360
-            }}
-            transition={{
-              duration: 25,
-              repeat: Infinity,
-              ease: "linear"
-            }}
+            animate={{ rotate: -360 }}
+            transition={{ duration: 25, repeat: Infinity, ease: "linear" }}
             className="absolute -bottom-32 -left-32 w-64 h-64 bg-gradient-to-r from-secondary-500/10 to-accent-500/10 rounded-full"
           />
 
@@ -51,7 +40,7 @@ const CTA = () => {
                 <span className="gradient-text"> Scale </span>
                 Your Growth?
               </motion.h2>
-              
+
               <motion.p
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -61,28 +50,35 @@ const CTA = () => {
                 Book a free 30-minute strategy call with our experts and discover how we can help you achieve remarkable results.
               </motion.p>
 
+              {/* CTA Buttons */}
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.2 }}
                 className="flex flex-col sm:flex-row gap-4 justify-center"
               >
-                <motion.button
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
-                  className="btn-primary flex items-center justify-center space-x-2"
-                >
-                  <span>Get My Free Strategy Call</span>
-                  <ArrowRight className="w-5 h-5" />
-                </motion.button>
-                
-                <motion.button
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
-                  className="px-8 py-3 border-2 border-gray-300 dark:border-white/20 text-gray-700 dark:text-white font-semibold rounded-full hover:bg-gray-100 dark:hover:bg-white/5 transition-all duration-300"
-                >
-                  View Pricing Plans
-                </motion.button>
+                {/* Contact redirect */}
+                <Link to="/contact">
+                  <motion.button
+                    whileHover={{ scale: 1.05 }}
+                    whileTap={{ scale: 0.95 }}
+                    className="btn-primary flex items-center justify-center space-x-2"
+                  >
+                    <span>Get My Free Strategy Call</span>
+                    <ArrowRight className="w-5 h-5" />
+                  </motion.button>
+                </Link>
+
+                {/* Services redirect */}
+                <Link to="/services">
+                  <motion.button
+                    whileHover={{ scale: 1.05 }}
+                    whileTap={{ scale: 0.95 }}
+                    className="px-8 py-3 border-2 border-gray-300 dark:border-white/20 text-gray-700 dark:text-white font-semibold rounded-full hover:bg-gray-100 dark:hover:bg-white/5 transition-all duration-300"
+                  >
+                    View Pricing Plans
+                  </motion.button>
+                </Link>
               </motion.div>
 
               <motion.p
@@ -98,7 +94,7 @@ const CTA = () => {
         </motion.div>
       </div>
     </section>
-  )
-}
+  );
+};
 
-export default CTA
+export default CTA;

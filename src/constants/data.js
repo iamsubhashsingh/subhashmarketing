@@ -11,7 +11,7 @@ export const services = [
       "Monthly performance reports"
     ],
     bestFor: "Businesses looking for immediate, measurable results",
-    price: "Starting at ₹12,000 / mo"
+    price: "Starting at ₹12,000/mo"
   },
   {
     id: 2,
@@ -25,7 +25,7 @@ export const services = [
       "Backlink strategy"
     ],
     bestFor: "Brands building long-term authority and organic traffic",
-    price: "Starting at ₹15,000 / mo"
+    price: "Starting at ₹15,000/mo"
   },
   {
     id: 3,
@@ -39,7 +39,7 @@ export const services = [
       "Influencer partnerships"
     ],
     bestFor: "Brands wanting to build social proof and engagement",
-    price: "Starting at ₹10,000 / mo"
+    price: "Starting at ₹10,000/mo"
   },
   {
     id: 4,
@@ -53,7 +53,7 @@ export const services = [
       "Conversion rate optimization"
     ],
     bestFor: "Businesses scaling with automated sales systems",
-    price: "Starting at ₹20,000/One time"
+    price: "Starting at 20,000/mo"
   },
   {
     id: 5,
@@ -67,7 +67,7 @@ export const services = [
       "Performance analytics"
     ],
     bestFor: "Businesses with existing email lists",
-    price: "₹15,000 / mo"
+    price: "Starting at ₹8,000/mo"
   },
   {
     id: 6,
@@ -81,7 +81,7 @@ export const services = [
       "Competitor analysis"
     ],
     bestFor: "Startups and rebranding initiatives",
-    price: "Custom packages"
+    price: "₹25,000/ One time"
   },
   {
     id: 7,
@@ -94,8 +94,8 @@ export const services = [
       "Messaging framework",
       "Competitor analysis"
     ],
-    bestFor: "Startups and Small Bussiness",
-    price: "₹25,000 (one-time)"
+    bestFor: "Startups and rebranding initiatives",
+    price: "₹12,000/ One time"
   }
   
 ]
@@ -197,7 +197,7 @@ export const testimonials = [
 export const teamMembers = [
   {
     id: 1,
-    name: "Alex Morgan",
+    name: "Subhash Singh",
     role: "CEO & Growth Strategist",
     bio: "10+ years in digital marketing, specializing in scaling e-commerce brands.",
     expertise: ["PPC", "Funnels", "Scaling"],
@@ -205,7 +205,7 @@ export const teamMembers = [
   },
   {
     id: 2,
-    name: "Taylor Kim",
+    name: "Unknown",
     role: "Head of Creative",
     bio: "Award-winning designer with a focus on brand storytelling and conversion.",
     expertise: ["Design", "Copywriting", "Branding"],
@@ -213,15 +213,15 @@ export const teamMembers = [
   },
   {
     id: 3,
-    name: "Jordan Lee",
-    role: "SEO Director",
+    name: "Sumeet Singh",
+    role: "SEO & Website Director",
     bio: "Technical SEO expert with proven track record in driving organic growth.",
     expertise: ["SEO", "Content", "Analytics"],
     image: "team-member3.jpg"
   },
   {
     id: 4,
-    name: "Casey Rivera",
+    name: "Unknown",
     role: "PPC Specialist",
     bio: "Data-driven marketer focused on maximizing ROI across paid channels.",
     expertise: ["Google Ads", "Meta Ads", "Analytics"],
@@ -233,7 +233,7 @@ export const pricingPlans = [
   {
     id: 1,
     name: "Starter",
-    price: "₹1,5000",
+    price: "₹15,000",
     period: "/month",
     description: "Perfect for small businesses starting their digital journey",
     features: [
@@ -249,7 +249,7 @@ export const pricingPlans = [
   {
     id: 2,
     name: "Growth",
-    price: "₹2,5000",
+    price: "₹25,000",
     period: "/month",
     description: "Ideal for scaling businesses with clear growth targets",
     features: [
@@ -288,25 +288,25 @@ export const pricingPlans = [
 export const processSteps = [
   {
     id: 1,
-    title: "Discover",
+    title: "Express who you are",
     description: "We analyze your business, competitors, and market opportunities.",
     icon: "🔍"
   },
   {
     id: 2,
-    title: "Strategy",
+    title: "Tailor your approach",
     description: "Custom roadmap creation with clear KPIs and milestones.",
     icon: "🎯"
   },
   {
     id: 3,
-    title: "Launch",
+    title: "Amplify your reach",
     description: "Implementation of campaigns with continuous optimization.",
     icon: "🚀"
   },
   {
     id: 4,
-    title: "Scale",
+    title: "Evolve in real-time",
     description: "Scale successful strategies and explore new opportunities.",
     icon: "📈"
   }

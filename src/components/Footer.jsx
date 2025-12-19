@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion'
 import { Link } from 'react-router-dom'
-import { Facebook, Twitter, Linkedin, Instagram, ArrowUp } from 'lucide-react'
+import { Linkedin, Instagram, MessageCircle, ArrowUp } from 'lucide-react'
 
 const Footer = () => {
   const scrollToTop = () => {
@@ -24,178 +24,131 @@ const Footer = () => {
   ]
 
   const socialLinks = [
-    { icon: Facebook, href: '#' },
-    { icon: Twitter, href: '#' },
-    { icon: Linkedin, href: '#' },
-    { icon: Instagram, href: '#' }
+    {
+      icon: MessageCircle,
+      href: 'https://wa.me/919079342907',
+      label: 'WhatsApp'
+    },
+    {
+      icon: Linkedin,
+      href: 'https://www.linkedin.com/in/subhash-singh-983060303?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app',
+      label: 'LinkedIn'
+    },
+    {
+      icon: Instagram,
+      href: 'https://www.instagram.com/subhash_singh0000?igsh=MTh3cWt1OGhhZnI5bA==',
+      label: 'Instagram'
+    }
   ]
 
   return (
     <footer className="relative backdrop-blur-lg bg-white/90 dark:bg-gray-900/90 border-t border-gray-200 dark:border-gray-800">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
         <div className="py-12 lg:py-16">
           <div className="grid lg:grid-cols-4 gap-8">
-            {/* Brand column */}
+
+            {/* Brand */}
             <div>
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                className="mb-6"
-              >
-                <Link to="/" className="flex items-center space-x-2">
-                  <div className="text-2xl font-heading font-bold bg-gradient-to-r from-primary-600 to-secondary-600 bg-clip-text text-transparent">
-                    GrowthWave
-                  </div>
-                  <span className="text-sm font-semibold text-gray-700 dark:text-gray-300">
-                    Marketing
-                  </span>
-                </Link>
-              </motion.div>
-              
-              <motion.p
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.1 }}
-                viewport={{ once: true }}
-                className="text-gray-700 dark:text-gray-300 text-sm mb-6"
-              >
+              <Link to="/" className="flex items-center space-x-2 mb-6">
+                <div className="text-2xl font-heading font-bold bg-gradient-to-r from-primary-600 to-secondary-600 bg-clip-text text-transparent">
+                  GrowthWave
+                </div>
+                <span className="text-sm font-semibold text-gray-700 dark:text-gray-300">
+                  Marketing
+                </span>
+              </Link>
+
+              <p className="text-gray-700 dark:text-gray-300 text-sm mb-6">
                 We help ambitious brands scale their growth through data-driven marketing strategies and high-ROI campaigns.
-              </motion.p>
-              
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.2 }}
-                viewport={{ once: true }}
-                className="flex space-x-4"
-              >
+              </p>
+
+              {/* Social Icons */}
+              <div className="flex space-x-4">
                 {socialLinks.map((social, index) => (
                   <motion.a
                     key={index}
                     href={social.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label={social.label}
                     whileHover={{ scale: 1.1, y: -2 }}
-                    className="w-10 h-10 rounded-full bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors flex items-center justify-center"
+                    className="w-10 h-10 rounded-full bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-green-100 dark:hover:bg-gray-700 transition-colors flex items-center justify-center"
                   >
                     <social.icon className="w-5 h-5" />
                   </motion.a>
                 ))}
-              </motion.div>
+              </div>
             </div>
 
             {/* Quick Links */}
             <div>
-              <h3 className="text-lg font-bold mb-6 text-gray-900 dark:text-white">Quick Links</h3>
+              <h3 className="text-lg font-bold mb-6 text-gray-900 dark:text-white">
+                Quick Links
+              </h3>
               <ul className="space-y-3">
-                {navLinks.map((link, index) => (
-                  <motion.li
-                    key={link.name}
-                    initial={{ opacity: 0, x: -20 }}
-                    whileInView={{ opacity: 1, x: 0 }}
-                    transition={{ delay: index * 0.05 }}
-                    viewport={{ once: true }}
-                  >
+                {navLinks.map((link) => (
+                  <li key={link.name}>
                     <Link
                       to={link.path}
-                      className="text-sm font-medium text-gray-700 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400 transition-colors"
+                      className="text-sm font-medium text-gray-700 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400"
                     >
                       {link.name}
                     </Link>
-                  </motion.li>
+                  </li>
                 ))}
               </ul>
             </div>
 
             {/* Services */}
             <div>
-              <h3 className="text-lg font-bold mb-6 text-gray-900 dark:text-white">Services</h3>
+              <h3 className="text-lg font-bold mb-6 text-gray-900 dark:text-white">
+                Services
+              </h3>
               <ul className="space-y-3">
-                {serviceLinks.map((service, index) => (
-                  <motion.li
+                {serviceLinks.map((service) => (
+                  <li
                     key={service}
-                    initial={{ opacity: 0, x: -20 }}
-                    whileInView={{ opacity: 1, x: 0 }}
-                    transition={{ delay: index * 0.05 }}
-                    viewport={{ once: true }}
+                    className="text-sm font-medium text-gray-700 dark:text-gray-300"
                   >
-                    <a
-                      href="#"
-                      className="text-sm font-medium text-gray-700 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400 transition-colors"
-                    >
-                      {service}
-                    </a>
-                  </motion.li>
+                    {service}
+                  </li>
                 ))}
               </ul>
             </div>
 
             {/* Contact Info */}
             <div>
-              <h3 className="text-lg font-bold mb-6 text-gray-900 dark:text-white">Contact Info</h3>
-              <ul className="space-y-4">
-                <motion.li
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  className="text-gray-700 dark:text-gray-300"
-                >
-                  Growthwavemarketing99@gmail.com
-                </motion.li>
-                <motion.li
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ delay: 0.1 }}
-                  viewport={{ once: true }}
-                  className="text-gray-700 dark:text-gray-300"
-                >
-                  +91 9079342907
-                </motion.li>
-                <motion.li
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ delay: 0.2 }}
-                  viewport={{ once: true }}
-                  className="text-gray-700 dark:text-gray-300"
-                >
-                  Bangaluru, India
-                </motion.li>
+              <h3 className="text-lg font-bold mb-6 text-gray-900 dark:text-white">
+                Contact Info
+              </h3>
+              <ul className="space-y-4 text-gray-700 dark:text-gray-300">
+                <li>Growthwavemarketing99@gmail.com</li>
+                <li>+91 9079342907</li>
+                <li>Bangaluru, INDIA</li>
               </ul>
             </div>
+
           </div>
         </div>
 
-        {/* Bottom bar */}
-        <div className="border-t border-gray-200 dark:border-gray-800 py-8">
-          <div className="flex flex-col md:flex-row justify-between items-center">
-            <motion.p
-              initial={{ opacity: 0 }}
-              whileInView={{ opacity: 1 }}
-              viewport={{ once: true }}
-              className="text-gray-700 dark:text-gray-400 text-sm mb-4 md:mb-0"
-            >
-              © {new Date().getFullYear()} GrowthWave Marketing. All rights reserved. (Developed by sumeet.sastacoder.com)
-            </motion.p>
-            
-            <div className="flex items-center space-x-6">
-              <a href="#" className="text-sm font-medium text-gray-700 dark:text-gray-400 hover:text-primary-600 dark:hover:text-primary-400 transition-colors">
-                Privacy Policy
-              </a>
-              <a href="#" className="text-sm font-medium text-gray-700 dark:text-gray-400 hover:text-primary-600 dark:hover:text-primary-400 transition-colors">
-                Terms of Service
-              </a>
-              
-              <motion.button
-                whileHover={{ scale: 1.1 }}
-                whileTap={{ scale: 0.9 }}
-                onClick={scrollToTop}
-                className="w-10 h-10 rounded-full bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors flex items-center justify-center"
-                aria-label="Scroll to top"
-              >
-                <ArrowUp className="w-5 h-5" />
-              </motion.button>
-            </div>
-          </div>
+        {/* Bottom Bar */}
+        <div className="border-t border-gray-200 dark:border-gray-800 py-8 flex flex-col md:flex-row justify-between items-center">
+          <p className="text-sm text-gray-700 dark:text-gray-400 mb-4 md:mb-0">
+            © {new Date().getFullYear()} GrowthWave Marketing. All rights reserved. (Developed by Sasta Coder)
+          </p>
+
+          <motion.button
+            whileHover={{ scale: 1.1 }}
+            whileTap={{ scale: 0.9 }}
+            onClick={scrollToTop}
+            className="w-10 h-10 rounded-full bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700 flex items-center justify-center"
+            aria-label="Scroll to top"
+          >
+            <ArrowUp className="w-5 h-5" />
+          </motion.button>
         </div>
+
       </div>
     </footer>
   )
