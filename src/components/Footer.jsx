@@ -52,10 +52,10 @@ const Footer = () => {
             <div>
               <Link to="/" className="flex items-center space-x-2 mb-6">
                 <div className="text-2xl font-heading font-bold bg-gradient-to-r from-primary-600 to-secondary-600 bg-clip-text text-transparent">
-                  GrowthWave
+                  Marketing
                 </div>
                 <span className="text-sm font-semibold text-gray-700 dark:text-gray-300">
-                  Marketing
+                  thebuildlab
                 </span>
               </Link>
 
@@ -123,7 +123,7 @@ const Footer = () => {
                 Contact Info
               </h3>
               <ul className="space-y-4 text-gray-700 dark:text-gray-300">
-                <li>Growthwavemarketing99@gmail.com</li>
+                <li>Marketing.thebuildlab@gmail.com</li>
                 <li>+91 9079342907</li>
                 <li>Bangaluru, INDIA</li>
               </ul>

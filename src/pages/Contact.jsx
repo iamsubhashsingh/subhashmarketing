@@ -7,7 +7,7 @@ const Contact = () => {
     {
       icon: Mail,
       title: "Email",
-      details: "Growthwavemarketing99@gmail.com",
+      details: "Marketing.thebuildlab@gmail.com",
       description: "We'll respond within 24 hours"
     },
     {

@@ -3,6 +3,7 @@ import { motion, AnimatePresence } from 'framer-motion'
 import { Menu, X, ArrowRight, Moon, Sun } from 'lucide-react'
 import { Link, useLocation } from 'react-router-dom'
 import { useTheme } from '../contexts/ThemeContext'
+import logo from '../assets/logo.png'
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false)
@@ -25,17 +26,29 @@ const Navbar = () => {
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
-          {/* Logo */}
+
+          {/* Logo + Brand */}
           <motion.div
             whileHover={{ scale: 1.05 }}
-            className="flex items-center space-x-2"
+            className="flex items-center space-x-3"
           >
-            <Link to="/" className="text-2xl font-heading font-bold bg-gradient-to-r from-primary-600 to-secondary-600 bg-clip-text text-transparent">
-              GrowthWave
+            <Link to="/" className="flex items-center space-x-3">
+
+              {/* ✅ Original Shape Logo */}
+              <img
+                src={logo}
+                alt="Marketing thebuildlab"
+                className="h-8 w-auto object-contain"
+              />
+
+              {/* Brand Text */}
+              <span className="text-2xl font-heading font-bold bg-gradient-to-r from-primary-600 to-secondary-600 bg-clip-text text-transparent">
+                Marketing
+              </span>
+              <span className="text-sm font-semibold text-gray-600 dark:text-gray-300">
+                thebuildlab
+              </span>
             </Link>
-            <span className="text-sm font-semibold text-gray-600 dark:text-gray-300">
-              Marketing
-            </span>
           </motion.div>
 
           {/* Desktop Navigation */}
@@ -64,7 +77,7 @@ const Navbar = () => {
                 </Link>
               </motion.div>
             ))}
-            
+
             {/* Theme Toggle */}
             <motion.button
               whileHover={{ scale: 1.05 }}
@@ -72,34 +85,36 @@ const Navbar = () => {
               onClick={toggleTheme}
               className="p-2 rounded-full bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors"
             >
-              {theme === 'dark' ? <Sun className="w-5 h-5" /> : <Moon className="w-5 h-5" />}
+              {theme === 'dark'
+                ? <Sun className="w-5 h-5" />
+                : <Moon className="w-5 h-5" />}
             </motion.button>
-            
+
             {/* CTA Button */}
             <Link to="/contact">
-  <motion.button
-    whileHover={{ scale: 1.05 }}
-    whileTap={{ scale: 0.95 }}
-    className="btn-primary flex items-center space-x-2"
-  >
-    <span>Get Free Strategy Call</span>
-    <ArrowRight className="w-4 h-4" />
-  </motion.button>
-</Link>
-
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="btn-primary flex items-center space-x-2"
+              >
+                <span>Get Free Strategy Call</span>
+                <ArrowRight className="w-4 h-4" />
+              </motion.button>
+            </Link>
           </div>
 
-          {/* Mobile menu button */}
+          {/* Mobile Controls */}
           <div className="md:hidden flex items-center space-x-2">
-            {/* Theme Toggle */}
             <motion.button
               whileTap={{ scale: 0.95 }}
               onClick={toggleTheme}
-              className="p-2 rounded-full bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300"
+              className="p-2 rounded-full bg-gray-100 dark:bg-gray-800"
             >
-              {theme === 'dark' ? <Sun className="w-5 h-5" /> : <Moon className="w-5 h-5" />}
+              {theme === 'dark'
+                ? <Sun className="w-5 h-5" />
+                : <Moon className="w-5 h-5" />}
             </motion.button>
-            
+
             <motion.button
               whileTap={{ scale: 0.95 }}
               onClick={() => setIsOpen(!isOpen)}
@@ -111,7 +126,7 @@ const Navbar = () => {
         </div>
       </div>
 
-      {/* Mobile menu */}
+      {/* Mobile Menu */}
       <AnimatePresence>
         {isOpen && (
           <motion.div
@@ -123,35 +138,15 @@ const Navbar = () => {
           >
             <div className="px-4 pt-2 pb-3 space-y-1">
               {navLinks.map((link) => (
-                <motion.div
+                <Link
                   key={link.name}
-                  initial={{ x: -20, opacity: 0 }}
-                  animate={{ x: 0, opacity: 1 }}
-                  transition={{ delay: 0.1 }}
+                  to={link.path}
+                  onClick={() => setIsOpen(false)}
+                  className="block px-3 py-2 rounded-lg text-base font-medium text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800"
                 >
-                  <Link
-                    to={link.path}
-                    onClick={() => setIsOpen(false)}
-                    className={`block px-3 py-2 rounded-lg text-base font-medium ${
-                      location.pathname === link.path
-                        ? 'bg-primary-50 dark:bg-gray-800 text-primary-600 dark:text-primary-400'
-                        : 'text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800'
-                    }`}
-                  >
-                    {link.name}
-                  </Link>
-                </motion.div>
+                  {link.name}
+                </Link>
               ))}
-              <motion.button
-                initial={{ x: -20, opacity: 0 }}
-                animate={{ x: 0, opacity: 1 }}
-                transition={{ delay: 0.2 }}
-                whileTap={{ scale: 0.95 }}
-                className="w-full btn-primary mt-4 flex items-center justify-center space-x-2"
-              >
-                <span>Free Strategy Call</span>
-                <ArrowRight className="w-4 h-4" />
-              </motion.button>
             </div>
           </motion.div>
         )}

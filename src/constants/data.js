@@ -168,7 +168,7 @@ export const testimonials = [
     id: 1,
     name: "Sarah Johnson",
     role: "CEO, EcoWear Apparel",
-    review: "GrowthWave transformed our digital presence. Their data-driven approach increased our ROAS by 3.2x in just two months. Highly recommended!",
+    review: "Marketing.thebuildlab transformed our digital presence. Their data-driven approach increased our ROAS by 3.2x in just two months. Highly recommended!",
     rating: 5
   },
   {
@@ -182,7 +182,7 @@ export const testimonials = [
     id: 3,
     name: "Jessica Williams",
     role: "Founder, Mindful Health",
-    review: "Working with GrowthWave was a game-changer. They built a community that truly cares about our brand.",
+    review: "Working with Marketing.thebuildlab was a game-changer. They built a community that truly cares about our brand.",
     rating: 5
   },
   {
