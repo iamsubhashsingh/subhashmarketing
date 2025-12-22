@@ -1,5 +1,5 @@
 User-agent: *
 Allow: /
+Crawl-delay: 10
 
-# Sitemap location
 Sitemap: https://marketing.thebuildlab.in/sitemap.xml
