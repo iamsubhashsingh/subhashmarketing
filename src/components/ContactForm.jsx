@@ -74,7 +74,7 @@ const ContactForm = () => {
         >
           <CheckCircle className="w-16 h-16 text-accent-500 mx-auto mb-6" />
           <h4 className="text-2xl font-bold mb-2 text-gray-900 dark:text-white">
-            Message Sent!
+            This is a strong signal
           </h4>
           <p className="text-gray-600 dark:text-gray-400">
             We'll get back to you within 24 hours.
