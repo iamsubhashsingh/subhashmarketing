@@ -87,12 +87,12 @@ export const services = [
     id: 7,
     title: "Website Builder",
     description: "Craft compelling your website for brand",
-    icon: "🎯",
+    icon: "🌐",
     features: [
-      "Brand positioning",
-      "Visual identity development",
-      "Messaging framework",
-      "Competitor analysis"
+      "Designed to convert",
+      "Clarity always",
+      "Design that feels right",
+      "Optimized for search, speed, and results"
     ],
     bestFor: "Startups and rebranding initiatives",
     price: "₹12,000/ One time"
