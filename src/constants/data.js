@@ -20,7 +20,7 @@ export const services = [
     icon: "🔍",
     features: [
       "Technical SEO audit",
-      "Keyword strategy & content planning",
+      "Keyword strategy & content planning & Market researching",
       "On-page optimization",
       "Backlink strategy"
     ],
