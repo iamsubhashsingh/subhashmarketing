@@ -9,6 +9,8 @@ const ServicesList = () => {
   return (
     <section className="section-padding">
       <div className="max-w-7xl mx-auto">
+        
+        {/* Heading */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -24,28 +26,37 @@ const ServicesList = () => {
           </p>
         </motion.div>
 
+        {/* Services */}
         <div className="space-y-8">
           {services.map((service, index) => (
             <motion.div
               key={service.id}
+
+              /* ✅ Deep-link anchor */
+              id={service.slug}
+
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
               viewport={{ once: true }}
               whileHover={{ scale: 1.01 }}
-              className="group"
+              className="group scroll-mt-28"
             >
               <div className="bg-white dark:bg-gray-800/50 border border-gray-200 dark:border-gray-700 rounded-3xl p-8 card-hover backdrop-blur-sm">
                 <div className="grid lg:grid-cols-3 gap-8">
-                  
+
                   {/* Left column */}
                   <div className="lg:col-span-2">
                     <div className="flex items-start gap-6">
-                      <div className="text-4xl flex-shrink-0">{service.icon}</div>
+                      <div className="text-4xl flex-shrink-0">
+                        {service.icon}
+                      </div>
+
                       <div>
                         <h3 className="text-2xl font-bold mb-4 text-gray-900 dark:text-white">
                           {service.title}
                         </h3>
+
                         <p className="text-gray-700 dark:text-gray-300 mb-6">
                           {service.description}
                         </p>
@@ -67,6 +78,7 @@ const ServicesList = () => {
                   {/* Right column */}
                   <div className="lg:border-l lg:border-gray-200 dark:lg:border-gray-700 lg:pl-8">
                     <div className="sticky top-8">
+                      
                       <div className="mb-6">
                         <div className="text-sm text-gray-500 dark:text-gray-400 mb-2">
                           Best for
@@ -85,7 +97,7 @@ const ServicesList = () => {
                         </div>
                       </div>
 
-                      {/* ✅ Redirects to Contact */}
+                      {/* CTA */}
                       <motion.button
                         whileHover={{ scale: 1.05 }}
                         whileTap={{ scale: 0.95 }}
@@ -95,6 +107,7 @@ const ServicesList = () => {
                         <span>Get a Proposal</span>
                         <ArrowRight className="w-5 h-5" />
                       </motion.button>
+
                     </div>
                   </div>
 
@@ -103,6 +116,7 @@ const ServicesList = () => {
             </motion.div>
           ))}
         </div>
+
       </div>
     </section>
   )

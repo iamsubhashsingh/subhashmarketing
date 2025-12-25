@@ -15,36 +15,37 @@ const Footer = () => {
   ]
 
   const serviceLinks = [
-    'PPC Management',
-    'SEO Strategy',
-    'Social Media',
-    'Funnel Building',
-    'Email Marketing',
-    'Brand Strategy'
+    { name: 'PPC Management', slug: 'ppc-management' },
+    { name: 'SEO Strategy', slug: 'seo-strategy' },
+    { name: 'Social Media', slug: 'social-media' },
+    { name: 'Funnel Building', slug: 'funnel-building' },
+    { name: 'Email Marketing', slug: 'email-marketing' },
+    { name: 'Brand Strategy', slug: 'brand-strategy' },
   ]
 
   const socialLinks = [
     {
       icon: MessageCircle,
       href: 'https://wa.me/919079342907',
-      label: 'WhatsApp'
+      label: 'WhatsApp',
     },
     {
       icon: Linkedin,
       href: 'https://www.linkedin.com/in/subhash-singh-983060303?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app',
-      label: 'LinkedIn'
+      label: 'LinkedIn',
     },
     {
       icon: Instagram,
       href: 'https://www.instagram.com/subhash_singh0000?igsh=MTh3cWt1OGhhZnI5bA==',
-      label: 'Instagram'
-    }
+      label: 'Instagram',
+    },
   ]
 
   return (
     <footer className="relative backdrop-blur-lg bg-white/90 dark:bg-gray-900/90 border-t border-gray-200 dark:border-gray-800">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
+        {/* Top Section */}
         <div className="py-12 lg:py-16">
           <div className="grid lg:grid-cols-4 gap-8">
 
@@ -63,7 +64,6 @@ const Footer = () => {
                 We help ambitious brands scale their growth through data-driven marketing strategies and high-ROI campaigns.
               </p>
 
-              {/* Social Icons */}
               <div className="flex space-x-4">
                 {socialLinks.map((social, index) => (
                   <motion.a
@@ -100,18 +100,20 @@ const Footer = () => {
               </ul>
             </div>
 
-            {/* Services */}
+            {/* Services (Clickable) */}
             <div>
               <h3 className="text-lg font-bold mb-6 text-gray-900 dark:text-white">
                 Services
               </h3>
               <ul className="space-y-3">
                 {serviceLinks.map((service) => (
-                  <li
-                    key={service}
-                    className="text-sm font-medium text-gray-700 dark:text-gray-300"
-                  >
-                    {service}
+                  <li key={service.slug}>
+                    <Link
+                      to={`/services#${service.slug}`}
+                      className="text-sm font-medium text-gray-700 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400"
+                    >
+                      {service.name}
+                    </Link>
                   </li>
                 ))}
               </ul>
@@ -135,7 +137,7 @@ const Footer = () => {
         {/* Bottom Bar */}
         <div className="border-t border-gray-200 dark:border-gray-800 py-8 flex flex-col md:flex-row justify-between items-center">
           <p className="text-sm text-gray-700 dark:text-gray-400 mb-4 md:mb-0">
-            © {new Date().getFullYear()} GrowthWave Marketing. All rights reserved. (Developed by Sasta Coder)
+            © {new Date().getFullYear()} Marketing.thebuildlab . All rights reserved. (Developed by Sasta Coder)
           </p>
 
           <motion.button

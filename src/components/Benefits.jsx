@@ -13,7 +13,7 @@ const Benefits = () => {
           className="text-center mb-16"
         >
           <h2 className="text-4xl md:text-5xl font-heading font-bold mb-6 text-gray-900 dark:text-white">
-            Why Choose <span className="gradient-text">GrowthWave</span>
+            Why Choose <span className="gradient-text">Marketing.thebuildlab</span>
           </h2>
           <p className="text-xl text-gray-600 dark:text-gray-400 max-w-3xl mx-auto">
             We combine cutting-edge technology with proven marketing strategies to deliver exceptional results.

@@ -92,7 +92,7 @@ export const services = [
       "Designed to convert",
       "Clarity always",
       "Design that feels right",
-      "Optimized for search, speed, and results"
+      "Competitor analysis"
     ],
     bestFor: "Startups and rebranding initiatives",
     price: "₹12,000/ One time"

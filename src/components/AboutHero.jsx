@@ -20,7 +20,7 @@ const AboutHero = () => {
               className="inline-flex items-center px-4 py-2 rounded-full bg-white/80 dark:bg-white/10 backdrop-blur-sm mb-6"
             >
               <span className="w-2 h-2 bg-accent-500 rounded-full mr-2 animate-pulse" />
-              <span className="text-sm font-medium text-gray-700 dark:text-gray-300">About GrowthWave</span>
+              <span className="text-sm font-medium text-gray-700 dark:text-gray-300">About Marketing.thebuildlab</span>
             </motion.div>
 
             <motion.h1
@@ -42,7 +42,7 @@ const AboutHero = () => {
               transition={{ delay: 0.4 }}
               className="text-xl text-gray-600 dark:text-gray-300 mb-8"
             >
-              At GrowthWave, we believe in partnerships, not just projects. We're a team of passionate marketers, designers, and strategists dedicated to driving measurable growth for your business.
+              At Marketing.thebuildlab, we believe in partnerships, not just projects. We're a team of passionate marketers, designers, and strategists dedicated to driving measurable growth for your business.
             </motion.p>
 
             <motion.div

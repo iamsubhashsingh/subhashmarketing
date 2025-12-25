@@ -1,11 +1,27 @@
 import { motion } from 'framer-motion'
 import { Helmet } from 'react-helmet-async'
+import { useEffect } from 'react'
+import { useLocation } from 'react-router-dom'
 
 import ServicesList from '../components/ServicesList'
 import Pricing from '../components/Pricing'
 import CTA from '../components/CTA'
 
 const Services = () => {
+  const location = useLocation()
+
+  /* ✅ Fix hash scrolling (/services#ppc-management) */
+  useEffect(() => {
+    if (location.hash) {
+      const el = document.getElementById(location.hash.replace('#', ''))
+      if (el) {
+        setTimeout(() => {
+          el.scrollIntoView({ behavior: 'smooth', block: 'start' })
+        }, 100)
+      }
+    }
+  }, [location])
+
   return (
     <>
       {/* ✅ SEO Meta Tags */}
@@ -43,7 +59,7 @@ const Services = () => {
         animate={{ opacity: 1 }}
         transition={{ duration: 0.5 }}
       >
-        {/* Hero */}
+        {/* ✅ Hero Section */}
         <section className="relative overflow-hidden section-padding pt-20">
           <div className="absolute inset-0 bg-gradient-to-br from-primary-50 via-transparent to-accent-50 dark:from-primary-900/20 dark:via-transparent dark:to-accent-900/20" />
 
@@ -63,7 +79,18 @@ const Services = () => {
           </div>
         </section>
 
-        <ServicesList />
+        {/* ✅ Service Anchors (DO NOT REMOVE) */}
+        <section id="ppc-management">
+          <ServicesList />
+        </section>
+
+        <section id="seo-strategy" />
+        <section id="social-media" />
+        <section id="funnel-building" />
+        <section id="email-marketing" />
+        <section id="brand-strategy" />
+
+        {/* ✅ Pricing + CTA */}
         <Pricing />
         <CTA />
       </motion.div>
