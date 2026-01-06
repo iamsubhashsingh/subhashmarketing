@@ -79,5 +79,9 @@ export default {
       },
     },
   },
-  plugins: [],
+
+  // ✅ ONLY ADDITION (NO DATA LOSS)
+  plugins: [
+    require('@tailwindcss/typography'),
+  ],
 }
