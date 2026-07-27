@@ -1,5 +1,5 @@
 import { motion } from "framer-motion"
-import { ArrowRight, Play } from "lucide-react"
+import { ArrowRight, Play, Briefcase } from "lucide-react"
 import { useNavigate } from "react-router-dom"
 
 const Hero = () => {
@@ -39,7 +39,7 @@ const Hero = () => {
             >
               <span className="w-2 h-2 bg-accent-500 rounded-full mr-2 animate-pulse" />
               <span className="text-sm font-medium text-gray-700 dark:text-gray-300">
-                🚀 100+ Brands Scaled
+                🚀 20+ Brands Scaled
               </span>
             </motion.div>
 
@@ -68,7 +68,7 @@ const Hero = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.5 }}
-              className="flex flex-col sm:flex-row gap-4 mb-8"
+              className="flex flex-col sm:flex-row flex-wrap gap-4 mb-8"
             >
               {/* Contact CTA */}
               <motion.button
@@ -90,6 +90,17 @@ const Hero = () => {
               >
                 <Play className="w-5 h-5" />
                 <span>Read Blogs</span>
+              </motion.button>
+
+              {/* Portfolio CTA */}
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                onClick={() => navigate("/portfolio")}
+                className="btn-secondary flex items-center justify-center space-x-2"
+              >
+                <Briefcase className="w-5 h-5 text-primary-500" />
+                <span>Portfolio</span>
               </motion.button>
             </motion.div>
 
@@ -151,15 +162,18 @@ const Hero = () => {
                 ))}
               </div>
 
-              <motion.div
-                animate={{ y: [0, -10, 0] }}
-                transition={{ duration: 3, repeat: Infinity }}
-                className="absolute -bottom-6 left-1/2 transform -translate-x-1/2"
+              <motion.button
+                whileHover={{ scale: 1.15 }}
+                whileTap={{ scale: 0.9 }}
+                animate={{ y: [0, -8, 0] }}
+                transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
+                onClick={() => navigate("/portfolio")}
+                title="View Portfolio"
+                aria-label="View Portfolio"
+                className="absolute -bottom-6 left-1/2 transform -translate-x-1/2 w-12 h-12 rounded-full bg-gradient-to-r from-primary-500 to-secondary-500 flex items-center justify-center shadow-lg shadow-primary-500/30 cursor-pointer group hover:brightness-110 transition-all z-20"
               >
-                <div className="w-12 h-12 rounded-full bg-gradient-to-r from-primary-500 to-secondary-500 flex items-center justify-center">
-                  <ArrowRight className="w-6 h-6 text-white" />
-                </div>
-              </motion.div>
+                <ArrowRight className="w-6 h-6 text-white group-hover:translate-x-0.5 transition-transform" />
+              </motion.button>
             </div>
           </motion.div>
 

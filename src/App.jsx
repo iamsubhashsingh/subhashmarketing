@@ -6,6 +6,10 @@ import Home from "./pages/Home"
 import About from "./pages/About"
 import Services from "./pages/Services"
 import Contact from "./pages/Contact"
+import Portfolio from "./pages/Portfolio"
+import CaseStudies from "./pages/CaseStudies"
+import PrivacyPolicy from "./pages/PrivacyPolicy"
+import TermsAndConditions from "./pages/TermsAndConditions"
 
 // Blog pages (NOT in header)
 import Blogs from "./pages/Blogs"
@@ -29,6 +33,10 @@ function App() {
             <Route path="/about" element={<About />} />
             <Route path="/services" element={<Services />} />
             <Route path="/contact" element={<Contact />} />
+            <Route path="/portfolio" element={<Portfolio />} />
+            <Route path="/case-studies" element={<CaseStudies />} />
+            <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+            <Route path="/terms-and-conditions" element={<TermsAndConditions />} />
 
             {/* Blog Pages (hidden, button-access only) */}
             <Route path="/blogs" element={<Blogs />} />

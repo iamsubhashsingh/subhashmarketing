@@ -66,7 +66,7 @@ const AboutHero = () => {
               <div className="flex items-start">
                 <div className="w-2 h-2 bg-accent-500 rounded-full mt-2 mr-3 flex-shrink-0" />
                 <p className="text-gray-700 dark:text-gray-300">
-                  Combined expertise of 4+ years in digital marketing and growth strategy
+                  Combined expertise of 4+ years in digital Markting, Growth strategy, and E-commerce
                 </p>
               </div>
             </motion.div>
@@ -79,8 +79,8 @@ const AboutHero = () => {
             className="grid grid-cols-2 gap-4"
           >
             {[
-              { value: "100+", label: "Brands Scaled" },
-              { value: "$25M+", label: "Revenue Generated" },
+              { value: "20+", label: "Brands Scaled" },
+              { value: "₹10M+", label: "Revenue Generated" },
               { value: "4.9/5", label: "Client Rating" },
               { value: "98%", label: "Retention Rate" }
             ].map((stat, index) => (

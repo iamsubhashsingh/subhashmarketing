@@ -166,28 +166,28 @@ export const caseStudies = [
 export const testimonials = [
   {
     id: 1,
-    name: "Sarah Johnson",
-    role: "CEO, EcoWear Apparel",
+    name: "Priya Sharma",
+    role: "CEO, EcoWear India",
     review: "Marketing.thebuildlab transformed our digital presence. Their data-driven approach increased our ROAS by 3.2x in just two months. Highly recommended!",
     rating: 5
   },
   {
     id: 2,
-    name: "Michael Chen",
-    role: "Marketing Director, TechStack",
-    review: "The team's expertise in SEO and content strategy helped us dominate our niche. 450% traffic growth speaks for itself.",
+    name: "Rahul Verma",
+    role: "Marketing Director, TechStack India",
+    review: "The team's expertise in SEO and content strategy helped us dominate our niche. 450% organic traffic growth speaks for itself.",
     rating: 5
   },
   {
     id: 3,
-    name: "Jessica Williams",
+    name: "Ananya Patel",
     role: "Founder, Mindful Health",
-    review: "Working with Marketing.thebuildlab was a game-changer. They built a community that truly cares about our brand.",
+    review: "Working with Marketing.thebuildlab was a game-changer. They built an engaged community that truly cares about our brand.",
     rating: 5
   },
   {
     id: 4,
-    name: "David Rodriguez",
+    name: "Vikramaditya Rao",
     role: "COO, CloudNine Apps",
     review: "Their funnel optimization increased our conversion rate by 300%. The results exceeded all expectations.",
     rating: 5
@@ -319,4 +319,116 @@ export const trustLogos = [
   { id: 4, name: "Shopify Partner" },
   { id: 5, name: "Clutch Top 100" },
   { id: 6, name: "Forbes Agency Council" }
+]
+
+export const portfolioProjects = [
+  {
+    id: 1,
+    number: "1",
+    title: "Project Overview",
+    docLink: "https://docs.google.com/document/d/1FnXI0mLN20pqhR5P8aOzOQSaSYIHvzVNB-_qK8YTmFc/edit?usp=sharing",
+    business: "Bright Smile Dental Clinic (Portfolio Project)",
+    industry: "Healthcare",
+    businessGoalHeading: "Generate appointment bookings for:",
+    businessGoals: [
+      "Dental implants",
+      "Teeth whitening",
+      "Root canal treatment"
+    ],
+    duration: "30 Days (Simulation)",
+    platform: "Google Ads",
+    campaignType: "Search Campaign",
+    previewImage: "https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&w=800&q=80",
+    brandTitle: "Bright Smile",
+    brandSubtitle: "DENTAL CLINIC",
+    brandTagline: "Healthy Smiles, Brighter Lives",
+    keyServices: [
+      { name: "Dental Implants", icon: "tooth" },
+      { name: "Teeth Whitening", icon: "sparkles" },
+      { name: "Root Canal Treatment", icon: "activity" }
+    ]
+  },
+  {
+    id: 2,
+    number: "2",
+    title: "Project Overview",
+    business: "EcoWear Apparel Co.",
+    industry: "E-Commerce & Apparel",
+    businessGoalHeading: "Drive online store sales and conversions for:",
+    businessGoals: [
+      "Sustainable summer collection",
+      "New customer acquisition",
+      "Retargeting website visitors"
+    ],
+    duration: "60 Days (Live Campaign)",
+    platform: "Meta & Google Ads",
+    campaignType: "Performance Max & Conversion Campaign",
+    previewImage: "https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&w=800&q=80",
+    brandTitle: "EcoWear",
+    brandSubtitle: "SUSTAINABLE APPAREL",
+    brandTagline: "Wear The Future, Sustainably",
+    keyServices: [
+      { name: "Meta Ads", icon: "shopping-bag" },
+      { name: "Retargeting", icon: "trending-up" },
+      { name: "Conversion Rate", icon: "zap" }
+    ]
+  },
+  {
+    id: 3,
+    number: "3",
+    title: "Project Overview",
+    docLink: "https://docs.google.com/document/d/1zlKYa3fEFXAAmdH0VPXUtqMkpQDo6hf0yE56lfM5KPY/edit?usp=sharing",
+    business: "Private Theater Bangalore (Portfolio Project)",
+    industry: "Entertainment & Event Venue",
+    businessGoalHeading: "Improve organic search visibility by:",
+    businessGoals: [
+      "Increasing Organic Website Traffic",
+      "Ranking Higher for High-Intent Keywords",
+      "Improving Google Business Profile Visibility",
+      "Growing Qualified Organic Leads",
+      "Increasing Local Brand Awareness",
+      "Improving Organic Conversion Rate"
+    ],
+    duration: "6 Months",
+    platform: "Google Search & Google Business Profile",
+    campaignType: "Local SEO Strategy",
+    previewImage: "https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?auto=format&fit=crop&w=800&q=80",
+    brandTitle: "Private Theater",
+    brandSubtitle: "BANGALORE",
+    brandTagline: "Exclusive Cinema & Event Experience",
+    keyServices: [
+      { name: "Local SEO", icon: "trending-up" },
+      { name: "Google Profile", icon: "sparkles" },
+      { name: "Organic Leads", icon: "zap" }
+    ]
+  },
+  {
+    id: 4,
+    number: "4",
+    title: "Project Overview",
+    docLink: "https://docs.google.com/document/d/1MGDpliRH7JiODbOV4v8qNZzyLLE0LAWteJEp5T9KGVg/edit?usp=sharing",
+    business: "BuildLab Marketing (Portfolio Project)",
+    industry: "Digital Marketing Agency",
+    businessGoalHeading: "Automate marketing and sales operations by:",
+    businessGoals: [
+      "Capturing Leads Automatically",
+      "Qualifying Leads with AI",
+      "Automating CRM Management",
+      "Automating WhatsApp & Email Follow-ups",
+      "Improving Client Onboarding",
+      "Reducing Manual Administrative Work"
+    ],
+    duration: "45 Days",
+    platform: "n8n, HubSpot CRM, WhatsApp Business, Gmail, Google Sheets",
+    campaignType: "AI Marketing Automation & CRM Workflow",
+    previewImage: "https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=800&q=80",
+    brandTitle: "BuildLab",
+    brandSubtitle: "MARKETING",
+    brandTagline: "AI-Powered Marketing & Sales Automation",
+    keyServices: [
+      { name: "AI Lead Scoring", icon: "sparkles" },
+      { name: "CRM Workflows", icon: "zap" },
+      { name: "Auto Follow-ups", icon: "trending-up" }
+    ]
+  }
 ]

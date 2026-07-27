@@ -1,8 +1,11 @@
 import { motion } from "framer-motion";
 import { ArrowUpRight } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 import { caseStudies } from "../constants/data";
 
 const CaseStudies = () => {
+  const navigate = useNavigate();
+
   // ✅ SAFETY GUARD (prevents white screen)
   if (!Array.isArray(caseStudies) || caseStudies.length === 0) {
     return null; // or a loader if you want
@@ -37,7 +40,8 @@ const CaseStudies = () => {
               transition={{ duration: 0.6, delay: index * 0.1 }}
               viewport={{ once: true }}
               whileHover={{ y: -10 }}
-              className="group"
+              onClick={() => navigate("/case-studies")}
+              className="group cursor-pointer"
             >
               <div className="bg-white dark:bg-gray-800/50 border border-gray-200 dark:border-gray-700 rounded-2xl p-8 h-full card-hover backdrop-blur-sm">
                 {/* Client */}
@@ -107,6 +111,7 @@ const CaseStudies = () => {
           <motion.button
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
+            onClick={() => navigate("/case-studies")}
             className="btn-secondary"
           >
             View All Case Studies
